@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+</head>
+
+<body>
+    <script>
+
+        // задание 1
+        let apple = 10;
+        let condition = 'random string';
+
+        alert(apple);
+        console.log(apple);
+
+        console.log('Good game is ' + condition);
+
+        // задание 2
+        let randomInt = 23;
+        let hundred = '100';
+        let randomBool = false;
+
+        console.log(randomBool + randomBool);
+        console.log(hundred + hundred);
+        console.log(randomInt + randomInt);
+        console.log(hundred + randomBool);
+        console.log(randomInt + hundred);
+        console.log(randomInt + randomBool);
+
+        // задание 3
+        let arr = [];
+
+        for (let i = 0; i < 10; i++) {
+            arr[i] = Math.floor(0 + Math.random() * (5 + 1 - 0));
+        }
+
+        console.log('Before filer: ' + arr);
+        arr = arr.filter((arrElement) => arrElement != 0);
+        console.log("After filter: " + arr);
+
+        // задание 4
+
+        // случайное число
+        function randomNumber(min, max) {
+            let rand = min + Math.random() * (max + 1 - min);
+            return Math.floor(rand);
+        }
+
+        console.log('Func test: ' + randomNumber(0, 10));
+
+        // умножение массива
+        function arrayMultiply(arr, integer) {
+            let temp = arr.map((arrEl) => arrEl * integer);
+            return temp;
+        }
+
+        let testArr = [];
+        for (let i = 0; i < 5; i++) {
+            testArr[i] = randomNumber(1, 6);
+        }
+        console.log('Before multiply: ' + testArr);
+        console.log('After multiply: ' + arrayMultiply(testArr, 5));
+
+        // анонимная функция
+        let randomWord = () => {
+            const wordList = ['Арбуз', 'Ягода', 'Собака', 'Гарфилд', 'Лазанья'];
+            return wordList[randomNumber(0, 4)];
+        }
+
+        console.log('Random word: ' + randomWord());
+
+        // объекты
+        let person = {
+            firstName: 'Тимофей',
+            surname: 'Романов',
+            patronymic: 'Николаевич',
+            birthday: '05/17/2003',
+            hobby: 'Программирование',
+            group: 'АИБ-3-043'
+        }
+        
+        person.getPersonInfo = function() {
+            const currentDate = new Date().getFullYear();
+            const birthdayDate = new Date(this.birthday).getFullYear();
+            const personAge = currentDate - birthdayDate;        
+
+            return `ФИО: ${this.firstName} ${this.surname} ${this.patronymic}, День рожденья: ${this.birthday}, Хобби: ${this.hobby}, Возраст: ${personAge}`
+        }
+
+        alert(person.getPersonInfo());
+
+        let employers = {
+            Иванов: 15000,
+            Романов: 40000,
+            Сидоров: 42300,
+            Смирнов: 10040,
+            Шкитов: 100000,
+            Александров: 24000,
+            Цой: 23230,
+            Садко: 25000,
+            Воробьёва: 300,
+            Андреева: 200000
+        }
+
+        function GetSalary (salary) {
+            let totalMoney = 0
+            for (let key in salary) {
+                totalMoney += salary[key];
+            }
+            
+            return totalMoney;
+        }
+
+        console.log('All salaries: ' + GetSalary(employers));
+
+    </script>
+</body>
+
+</html>
