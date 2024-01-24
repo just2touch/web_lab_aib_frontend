@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    height: 26px;
+}
+
+p {
+    margin-bottom: 6px;
+}
+
+.main-container {
+    margin-left: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.main-container .color-box {
+    margin-top: 64px;
+    margin-left: 128px;
+    height: 256px;
+    width: 256px;
+    background-color: white;
+}
+
+.main-container .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-left: 32px;
+}
+
+.container .input-container {
+    margin-top: 24px;
+}
