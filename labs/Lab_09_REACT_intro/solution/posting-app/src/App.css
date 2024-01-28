@@ -1,0 +1,102 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+p{
+  margin-left: 10px;
+}
+
+body{
+  background-color:white;
+}
+
+button {
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid ;
+  margin: 10px;
+  padding: 5px;
+  width: auto;
+  height: 30px;
+} 
+
+input {
+  text-align: center;
+  height: 30px;
+  width: 200px;
+  margin: 20px;
+  border-radius: 3px;
+  border: 2px solid;
+}
+
+.post {
+  border: 1px solid ;
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  width: 300px;
+  border-radius: 5px;
+  background-color:white;
+}
+
+.post-add-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.post-button {
+  display: inline;
+  text-align: center;
+  justify-content: left;
+  width: 50px;
+  height: 30px;
+  margin: 20px;
+}
+
+.post-text {
+  font-size: 20px;
+}
+
+#delete-post {
+  margin-left: 10px;
+}
+
+#delete-post:hover {
+  background-color: red;
+}
+
+#like-post:hover {
+  background-color: green;
+}
+
+.tags-list {
+  font-size: 25px;
+}
+
+h3{
+  font-size: 40x;
+}
+
+#add-post {
+  margin-top: 5px;
+  margin-left: 20px;
+  height: 30px;
+  width: 120px;
+  padding: 6px;
+}
+
+#add-post:hover {
+  background-color: yellowgreen;
+}
+
+#show-all {
+  margin: 20px;
+  height: 30px;
+  width: auto;
+}
+
+#show-all:hover {
+  background-color:gainsboro;
+}
